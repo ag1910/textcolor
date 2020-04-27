@@ -1,0 +1,51 @@
+<html lang="en" dir="ltr"><link href="hele.css" type="text/css" rel="stylesheet"l>
+<head>
+<title>text color</title>
+
+<script src="jscolor.js"></script>
+<body style="background-color:MediumSeaGreen;">
+  you text : <br>
+<textarea rows="10" id="yazi"></textarea>
+ <div id="sonuc"></div>
+    <input type="button" id="btn1" value="print">
+
+
+
+<script>
+
+btn1.onclick=function() {
+  setTimeout(function(){ window.location='A.html'; }, 60000);
+
+var s1=(document.getElementById("yazi").value);
+
+document.getElementById("kutuAlan").innerHTML=("<font size='10'>"+s1+"</font>");
+
+}
+</script>
+<script>
+      var yazi=document.querySelector('#yazi');
+      var sonuc=document.querySelector('#sonuc');
+
+    yazi.oninput=function(){
+        var maksimum=60;
+        this.value=this.value.substr(0,maksimum);
+        var kalan= maksimum-this.value.length;
+        sonuc.innerHTML='remaining character : '+kalan;
+    }
+    </script>
+
+<button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}">
+  Pick text color
+</button>
+
+
+<script>
+function setTextColor(picker) {
+  document.getElementsByTagName('body')[0].style.color = '#' + picker.toString()
+}
+</script>
+
+        <button type="btn5" onclick="window.location='A.html';"class="btn btn-warning">Exit</button>
+</body>
+<div id="kutuAlan" class="ortala"></div>
+</html>

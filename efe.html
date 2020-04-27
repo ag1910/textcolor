@@ -1,0 +1,41 @@
+<html lang="en" dir="ltr"><link href="hele.css" type="text/css" rel="stylesheet"l>
+<head>
+<title>text color (efe)</title>
+
+<script src="jscolor.js"></script>
+<body style="background-color:Gray;">
+  you text : <br>
+<textarea rows="10" id="yazi"></textarea>
+ <div id="sonuc"></div>
+    <input type="button" id="btn1" value="print">
+
+
+
+<script>
+
+btn1.onclick=function() {
+
+
+var s1=(document.getElementById("yazi").value);
+
+document.getElementById("kutuAlan").innerHTML=("<font size='10'>"+s1+"</font>");
+
+}
+</script>
+
+
+<button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}">
+  Pick text color
+</button>
+
+
+<script>
+function setTextColor(picker) {
+  document.getElementsByTagName('body')[0].style.color = '#' + picker.toString()
+}
+</script>
+
+        <button type="btn5" onclick="window.location='pro2.html';"class="btn btn-warning">Exit</button>
+</body>
+<div id="kutuAlan" class="ortala"></div>
+</html>
