@@ -5,21 +5,8 @@
     <title>ege password</title>
   </head>
   <body>
-    <script language="javascript">
-    <!--//
-    /*This Script allows people to enter by using a form that asks for a
-    UserID and Password*/
-    function pasuser(form) {
-    if (form.id.value=="Ege") {
-    if (form.pass.value=="29") {
-    location="ege.html"
-    } else {
-    alert("Invalid Password")
-    }
-  } else {  alert("Invalid Acount name")
-    }
-    }
-    //-->
+    <script src="ege.js">
+
     </script>
 
     <center>
@@ -33,6 +20,6 @@
     <tr><td><center><input type="button" value="Login"
     onClick="pasuser(this.form)"></center></td><td><center><br><input
     type="Reset"></td></tr></table></center>
-    <button type="btn5" onclick="window.location='A.html';"class="btn btn-warning">Exit</button>
+    <button type="button" onclick="window.location='A.html';"class="btn btn-warning">Exit</button>
   </body>
 </html>
